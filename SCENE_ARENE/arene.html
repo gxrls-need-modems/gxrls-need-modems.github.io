@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<!---
+              _ ____________________
+_|_________\\\\\\                  (_
+ |                                   |
+ |         eat_code_and_die          |
+ |_                        __________|_
+   )_______________________\         |
+
+-->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+          <title>↯–↯–GXRLS NEED MODEMS-↯–↯</title>
+    <link rel="stylesheet" href="../style_commun.css">
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../script_commun.js"></script>
+
+
+	<style type="text/css">
+
+
+        @keyframes pied_drop{
+		0% {margin-top:-600px;}
+		90% {margin-top:-600px;}
+		98% {margin-top:-200px;}
+		100% {margin-top:-200px;}
+		}
+
+		.pied_drop{
+    	animation-name: pied_drop;
+    	animation-duration: 2s;
+		}
+
+		@keyframes arene_shake{
+		0% {margin-top:0px; margin-left:0px;}
+		94% {margin-top:0px; margin-left:0px;}
+		95% {margin-top:5px; margin-left:8px;}
+		96% {margin-top:-5px; margin-left:2px;}
+		97% {margin-top:-2px; margin-left:-6px;}
+		98% {margin-top:5px; margin-left:8px;}
+		99% {margin-top:0px; margin-left:0px;}
+		100% {margin-top:0px; margin-left:0px;}
+		}
+
+		@keyframes pied_lift{
+		0% {margin-top:-200px;}
+		15% {margin-top:-200px;}
+		30% {margin-top:-600px;}
+		100% {margin-top:-600px;}
+		}
+
+		.pied_lift{
+    	animation-name: pied_lift;
+    	animation-duration: 4s;
+		}
+
+        @keyframes arene_colere{
+        0% {margin-top:0px; margin-left:0px;}
+        20% {margin-top:10px; margin-left:12px;}
+        40% {margin-top:-6px; margin-left:8px;}
+        60% {margin-top:-12px; margin-left:-2px;}
+        80% {margin-top:5px; margin-left:-6px;}
+        100% {margin-top:6px; margin-left:12px;}
+        }
+
+	</style>
+
+
+</head>
+<body>
+
+	<a href="../SCENE_ENTREE_ARENE/entree_arene.html" id="bigcarto">retour à l'entrée de l'arène --></a>
+
+    <a href="../INVENTAIRE/inventaire.html" id="inventaire" >inventaire</a>
+
+    <!--///////////////////////ARENA///////////////////////////////////-->
+    <pre id="bg-arena" style="margin-left: 0px; margin-top: 0px; animation: arene_shake ; animation-duration: 2s;"><script>document.include('txt/arena.txt');</script></pre>
+
+    <pre id="bg-arena-colere" style="margin-left: 0px; margin-top: 0px; animation: arene_colere 0.1s infinite; display: none;"><script>document.include('txt/arena.txt');</script></pre>
+
+    <pre id="bug" onclick="helpbug()" style="margin-left: 380px; margin-top: 130px;"><script>document.include('txt/bug.txt');</script></pre>
+
+    <pre id="bug_attaque" style="margin-left: 380px; margin-top: 130px; display: none;"><script>document.include('txt/bug_attaque.txt');</script></pre>
+    
+    
+    <pre id="nuage" style="margin-left:298px; top: 40px; cursor: pointer; height: 80px;" onclick="animate_nuage(); animate_ver()"><script>document.include('txt/nuage1.txt');</script></pre>
+
+    <pre id="ver" style="margin-left:90px; margin-top: 215px; width: 300px;"><script>document.include('txt/ver0.txt');</script></pre>
+
+    <pre id="pied" class="pied_drop" style="margin-left:-75px; margin-top:-200px; background-color: white;"><script>document.include('txt/pied.txt');</script></pre>
+
+    <div id="toile" style="margin-left:-1200px; margin-top: 500px; cursor: pointer;" onclick="transfem_serv()">
+      <pre ><script>document.include('txt/toile.txt');</script>
+      </pre>
+    </div>
+
+    <div id="spider" style="margin-left:-950px; margin-top: 350px; cursor: pointer;" onclick="spideralex()">
+      <pre ><script>document.include('txt/spider.txt');</script>
+      </pre>
+    </div>
+
+    <div id="star" style="margin-left:500px; margin-top: 0px; cursor: pointer;" onclick="moog()">
+      <pre ><script>document.include('txt/star.txt');</script>
+      </pre>
+    </div>
+
+
+<!--    ////////////////////////LES POP PAGES////////////////////   -->
+
+    <div id="transfem_serv" style="display: none;">
+      <pre style="background-color: white; z-index:6;"><script>document.include('txt/transfem_serv.txt');</script>
+      </pre>
+    </div>
+
+    <div id="spideralex" style="display: none;">
+      <pre style="background-color: white; z-index:6;"><script>document.include('txt/citation_spideralex.txt');</script>
+      </pre>
+    </div>
+
+    <div id="moog" style="display: none;">
+      <pre style="background-color: white; z-index:6;"><script>document.include('txt/moog.txt');</script>
+      </pre>
+    </div>
+
+    <div id="bug_1" class="popup" style=" display:none;">
+        <pre class="pe_popup" style="z-index: 4; background-color: white; "><script>document.include('txt/bug_1.txt')</script></pre>
+        <button id="bouton_1_a" class="bouton_intro" onclick="bug_2()" style="width:121px; top:60px;left:-104px;">Oh, pardon... je... je...</button>
+        <button id="bouton_1_b" class="bouton_intro" onclick="bug_2()" style="width:197px; top:60px;left:80px;">Tu as une voix qui porte pour un si petit corps</button>
+    </div>
+
+    <div id="bug_2" style="display:none;">
+        <pre style="z-index: 4; background-color: white; "><script>document.include('txt/bug_2.txt')</script></pre>
+        <button id="bouton_2_a" class="bouton_intro" onclick="bug_3()" style="width:294px; top:43px;">Tout est devenu si petit d'un coup...</button>
+        <button id="bouton_2_b" class="bouton_intro" onclick="bug_3()" style="width:236px; top:70px;">Ou suis-je devenu·e géant·e&nbsp;?</button>
+    </div>
+
+    <div id="bug_3" style="display:none;">
+        <pre style="z-index: 4; background-color: white; "><script>document.include('txt/bug_3.txt')</script></pre>
+        <button id="bouton_3" class="bouton_intro" onclick="popup_phrase()" style="width:106px; top:70px;">Si tu veux</button>
+    </div>
+
+
+<!--/////////////////////////PHRASE DONNA H//////////////////////////////-->
+
+
+    <div id="popup_phrase" style="display: none;">
+        <pre style="z-index: 4; background-color: white; "><script>document.include('txt/bug_4.txt')</script></pre>
+        <div id="phrase_donna" style="display: flex; margin-top:60px; left:-50px; transform:translate(-50%,-50%); z-index: 10;">
+            <input type="text" id="phrase">
+            <button id="donner_phrase" style="cursor: pointer; margin-left: 5px;" onclick="fonctionPhrase()">Soumettre</button>
+        </div>        
+    </div>
+
+    <div id="bug_5" style="display:none;">
+        <pre style="z-index: 4; background-color: white; "><script>document.include('txt/bug_5.txt')</script></pre>
+        <button id="bouton_5_a" class="bouton_intro" onclick="fonction_fuite()" style="width:62px; top:59px; left:-67px;">Fuir</button>
+        <button id="bouton_5_b" class="bouton_intro" style="width:77px; top:59px; left:62px; cursor: not-allowed;">Périr</button>
+    </div>
+
+    <div id="bug_6" style="display:none;">
+        <pre style="z-index: 4; background-color: white; "><script>document.include('txt/bug_6.txt')</script></pre>
+    </div>
+
+    <div id="bug_7" style="display:none;">
+        <pre style="z-index: 4; background-color: white; "><script>document.include('txt/bug_7.txt')</script></pre>
+    </div>
+    
+
+<!--///////////////////////FERMER PAGE///////////////////////////////////-->
+
+
+    <div id="tout_fermer" style="height:100vh; width: 100vw; z-index: 20; cursor: pointer; transform: translate(-50%, -50%); top: 50%; left: 50%; display: none;" onclick="tout_fermer()"></div>
+
+    <div id="bloqueur"></div>
+
+
+<script>
+
+///////////////////////nuage///////////////////////////////////
+var text_nuage = [
+	'txt/nuage1.txt',
+    'txt/nuage2.txt',
+    'txt/nuage3.txt',
+    'txt/nuage4.txt',
+    'txt/nuage5.txt',
+    'txt/nuage1.txt',
+    'txt/nuage2.txt',
+    'txt/nuage3.txt',
+    'txt/nuage4.txt',
+    'txt/nuage5.txt'
+];
+
+var counter_nuage = 0;
+var preElement_nuage = document.getElementById("nuage");
+var textContents_nuage = [];
+var timer_nuage;
+
+// Preload all the text files using AJAX
+for (var i = 0; i < text_nuage.length; i++) {
+    preloadText_nuage(text_nuage[i], i);
+}
+
+// Function to preload a text file and store its content
+function preloadText_nuage(url, index) {
+    var request_nuage = new XMLHttpRequest();
+    request_nuage.open('GET', url, true);
+    request_nuage.onreadystatechange = function () {
+        if (request_nuage.readyState === XMLHttpRequest.DONE && request_nuage.status === 200) {
+            textContents_nuage[index] = request_nuage.responseText;
+        }
+    };
+    request_nuage.send();
+}
+
+function animate_nuage() {
+    if (counter_nuage < text_nuage.length) {
+        preElement_nuage.textContent = textContents_nuage[counter_nuage];
+        counter_nuage++;
+        timer_nuage = setTimeout(animate_nuage, 50);
+    } else {
+        // Reset the animation to the initial state
+        counter_nuage = 0;
+        preElement_nuage.textContent = textContents_nuage[counter_nuage];
+    }
+}
+
+///////////////////////ver///////////////////////////////////
+var text_ver = [
+	'txt/ver0.txt',
+	'txt/ver0.txt',
+	'txt/ver0.txt',
+	'txt/ver0.txt',
+	'txt/ver0.txt',
+	'txt/ver0.txt',
+	'txt/ver0.txt',
+	'txt/ver0.txt',
+	'txt/ver0.txt',
+	'txt/ver0.txt',
+	'txt/ver0.txt',
+	'txt/ver1.txt',
+    'txt/ver2.txt',
+    'txt/ver3.txt',
+    'txt/ver4.txt',
+    'txt/ver5.txt',
+    'txt/ver6.txt',
+	'txt/ver7.txt',
+    'txt/ver8.txt',
+    'txt/ver9.txt',
+    'txt/ver10.txt',
+    'txt/ver11.txt',
+    'txt/ver12.txt',
+    'txt/ver13.txt',
+    'txt/ver14.txt',
+    'txt/ver15.txt',
+    'txt/ver16.txt',
+    'txt/ver17.txt'
+];
+
+var counter_ver = 0;
+var preElement_ver = document.getElementById("ver");
+var textContents_ver = [];
+var timer_ver;
+
+// Preload all the text files using AJAX
+for (var i = 0; i < text_ver.length; i++) {
+    preloadText_ver(text_ver[i], i);
+}
+
+// Function to preload a text file and store its content
+function preloadText_ver(url, index) {
+    var request_ver = new XMLHttpRequest();
+    request_ver.open('GET', url, true);
+    request_ver.onreadystatechange = function () {
+        if (request_ver.readyState === XMLHttpRequest.DONE && request_ver.status === 200) {
+            textContents_ver[index] = request_ver.responseText;
+        }
+    };
+    request_ver.send();
+}
+
+function animate_ver() {
+    if (counter_ver < text_ver.length) {
+        preElement_ver.textContent = textContents_ver[counter_ver];
+        counter_ver++;
+        timer_ver = setTimeout(animate_ver, 75);
+    } else {
+        // Reset the animation to the initial state
+        counter_ver = 0;
+        preElement_ver.textContent = textContents_ver[counter_ver];
+    }
+}
+
+
+/////////ONLOAD/////////
+
+    if(localStorage.getItem("transfem_serv") == "ok"){
+        document.getElementById("toile").style.cursor= "auto";
+    }
+
+    if(localStorage.getItem("citation_spideralex") == "ok"){
+        document.getElementById("spider").style.cursor= "auto";
+    }
+
+    if(localStorage.getItem("moog") == "ok"){
+        document.getElementById("star").style.cursor= "auto";
+    }
+
+
+/////////DIALOGUE/////////
+
+    if (localStorage.getItem("retourne_source") == "ok") {
+        $("#bug").css('cursor','pointer');
+        const timer_bug_7 = setTimeout(bug_7, 3000);
+    }else{
+    if(localStorage.getItem("intro_bug") == "ok"){
+        const timer_bug_3 = setTimeout(bug_3, 3000);
+    }else{
+        const timer_bug_1 = setTimeout(bug_1, 3000);
+    }
+    }
+
+
+function helpbug(){
+    if (localStorage.getItem("retourne_source") == "ok") {
+        bug_7();
+    }else{}
+
+}
+
+
+    function bug_1(){
+        document.getElementById("bug_1").style.display = "block";
+        localStorage.setItem("intro_bug", "ok");
+document.getElementById("bloqueur").style.display = "block";
+
+    }
+
+    function bug_7(){
+        document.getElementById("bug_7").style.display = "block";
+        $("#tout_fermer").css("display", "block");
+    }
+
+    function bug_2(){
+        document.getElementById("bug_2").style.display= "block";   
+        document.getElementById("bouton_2_a").style.display= "block";
+        document.getElementById("bouton_2_b").style.display= "block";
+        document.getElementById("bouton_1_a").style.display= "none";
+        document.getElementById("bouton_1_b").style.display= "none";
+        document.getElementById("bug_1").style.display= "none";
+        document.getElementById("bug").style.display= "none";
+        document.getElementById("bug_attaque").style.display= "block";
+        document.getElementById("bloqueur").style.display = "block";
+    }
+
+    function bug_3(){
+        document.getElementById("bug_3").style.display= "block";
+        document.getElementById("bouton_3").style.display= "block";   
+        document.getElementById("bouton_2_a").style.display= "none";
+        document.getElementById("bouton_2_b").style.display= "none";
+        document.getElementById("bug_2").style.display= "none";
+        document.getElementById("bug").style.display= "block";
+        document.getElementById("bug_attaque").style.display= "none";
+        document.getElementById("bloqueur").style.display = "block";
+    }
+
+
+    function popup_phrase(){
+        document.getElementById("popup_phrase").style.display= "block"; 
+        document.getElementById("bouton_3").style.display= "none";
+        document.getElementById("bug_3").style.display= "none";
+        document.getElementById("bloqueur").style.display = "block";
+        $("#bug").css('cursor','pointer');
+    }
+
+
+//////////////////////////FONCTION PHRASE//////////////////////////////////////
+
+    function fonctionPhrase(){
+        var x = document.getElementById("phrase").value;
+        var phrase = 'Nos machines sont  étrangement vivantes,  et nous, nous sommes  épouvantablement inertes.';
+        var phrase_alt = 'Nos machines sont étrangement vivantes, et nous, nous sommes épouvantablement inertes.';
+        if (localStorage.getItem("retourne_source") == "ok") {       
+        }else if( x==phrase || x==phrase_alt){
+            document.getElementById("popup_phrase").style.display= "none";
+            document.getElementById("bug_6").style.display= "block";
+            $("#tout_fermer").css("display", "block");
+            localStorage.setItem("retourne_source","ok");
+        }else{
+            document.getElementById("popup_phrase").style.display= "none";
+            document.getElementById("bug_5").style.display= "block";
+            document.getElementById("bouton_5_a").style.display= "block";
+            document.getElementById("bouton_5_b").style.display= "block";
+            document.getElementById("bug").style.display= "none";
+            document.getElementById("bug_attaque").style.display= "block";
+            document.getElementById("bg-arena").style.display= "none";
+            document.getElementById("bg-arena-colere").style.display= "block";
+        document.getElementById("bloqueur").style.display = "block";
+
+
+        }
+    }
+
+
+    function fonction_fuite(){
+    	document.getElementById("bug_5").style.display = "none";
+        document.getElementById("bouton_5_a").style.display= "none";
+        document.getElementById("bouton_5_b").style.display= "none";
+        document.getElementById("pied").classList.remove("pied_drop");
+        document.getElementById("pied").classList.add("pied_lift");
+        setTimeout(() => {  window.location.href='../SCENE_ENTREE_ARENE/entree_arene.html'; }, 2000);
+        document.getElementById("bloqueur").style.display = "block";
+
+    }
+
+
+/////////////////////////////POPUP PAGES/////////////////////////////////
+
+    function transfem_serv(){
+        if(localStorage.getItem("transfem_serv") == "ok"){
+            document.getElementById("toile").style.cursor = "auto";   
+        }else{
+            document.getElementById("transfem_serv").style.display = "block";
+            document.getElementById("tout_fermer").style.display = "block";
+            document.getElementById("toile").style.cursor = "auto";
+            localStorage.setItem("transfem_serv", "ok");
+        }
+    }
+
+    function spideralex(){
+        if(localStorage.getItem("citation_spideralex") == "ok"){
+            document.getElementById("spider").style.cursor = "auto";   
+        }else{
+            document.getElementById("spideralex").style.display = "block";
+            document.getElementById("tout_fermer").style.display = "block";
+            document.getElementById("spider").style.cursor = "auto";
+            localStorage.setItem("citation_spideralex", "ok");
+        }
+    }
+
+    function moog(){
+        if(localStorage.getItem("moog") == "ok"){
+            document.getElementById("star").style.cursor = "auto";   
+        }else{
+            document.getElementById("moog").style.display = "block";
+            document.getElementById("tout_fermer").style.display = "block";
+            document.getElementById("star").style.cursor = "auto";
+            localStorage.setItem("moog", "ok");
+        }
+    }
+
+    function tout_fermer(){
+        $("#tout_fermer").css('display', 'none');
+        $(".popup").css('display', 'none');
+        $("#bug_6").css('display', 'none');
+        $("#bug_7").css('display', 'none');
+        $("#transfem_serv").css('display', 'none');
+        $("#spideralex").css('display', 'none');
+        $("#moog").css('display', 'none');
+                document.getElementById("bloqueur").style.display = "none";
+
+    }
+
+
+
+</script>
+
+    
+</body>
+</html>

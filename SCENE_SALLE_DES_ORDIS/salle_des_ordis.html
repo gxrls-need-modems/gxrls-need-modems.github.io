@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<!---
+              _ ____________________
+_|_________\\\\\\                  (_
+ |                                   |
+ |         eat_code_and_die          |
+ |_                        __________|_
+   )_______________________\         |
+
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+          <title>↯–↯–GXRLS NEED MODEMS-↯–↯</title>
+    <link rel="stylesheet" href="../style_commun.css">
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../script_commun.js"></script>
+
+
+    <style>
+
+        body {
+
+pre{
+}
+
+
+ @keyframes text_pancarte{
+0% {text-shadow: 0 0 0 #000000, 0 0 0 #000000;}
+20% {text-shadow: 0 0 0.35em #000000;}
+26% {text-shadow: 0 0 0 #000000, 0 0 0 #000000;}
+27% {text-shadow: 0 0 0.35em #000000;}
+28% {text-shadow: 0 0 0 #000000, 0 0 0 #000000;}
+29% {text-shadow: 0 0 0.35em #000000;}
+35% {text-shadow: 0 0 0 #000000, 0 0 0 #000000;}
+100% {text-shadow: 0 0 0 #000000, 0 0 0 #000000;}
+}
+}
+
+
+#telephone{
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+     font-size: 9px !important;
+     line-height: 11px !important;
+}
+
+
+#bipbip{
+    animation: 20s infinite;
+    animation-delay: 5s;
+    opacity: 0;
+     font-size: 9px !important;
+     line-height: 11px !important;
+}
+
+
+.pop_up{
+    font-size: 13px !important;
+         line-height: 15px !important;
+}
+
+@keyframes secousse {
+  0% { rotate: 0deg; }
+  1%  { rotate: 3deg;}
+  2%  { rotate: -3deg;}
+   3%  { rotate: 3deg; }
+  4%  { rotate: -3deg; }
+   5%  {rotate: 3deg; }
+  6%  { rotate: -3deg;}
+  7% { rotate: 0deg; }
+  14% { rotate: 0deg; }
+  15%  { rotate: 3deg;}
+  16%  { rotate: -3deg;}
+   17%  { rotate: 3deg; }
+  18%  { rotate: -3deg; }
+   19%  {rotate: 3deg; }
+  20%  { rotate: -3deg;}
+  21% { rotate: 0deg; }
+  30% { rotate: 0deg; }
+  31%  { rotate: 3deg;}
+  32%  { rotate: -3deg;}
+  33%  { rotate: 3deg; }
+  34%  { rotate: -3deg; }
+  35%  {rotate: 3deg; }
+  36%  { rotate: -3deg;}
+  37% { rotate: 0deg; }
+}
+
+@keyframes bipbip {
+  0% { opacity: 0; }
+  1%  { opacity: 1;}
+  7%  { opacity: 1;}
+  8% { opacity: 0; }
+  14% { opacity: 0; }
+  15%  { opacity: 1;}
+  22% { opacity: 1; }
+  23% { opacity: 0; }
+  30% { opacity: 0; }
+  31%  { opacity: 1;}
+  38% { opacity: 1; }
+  39% { opacity: 0; }
+}
+
+
+
+
+        @keyframes envol {
+          0%   { margin-left: 0px; }
+          5%  { margin-top: -30px;}
+          9%  { margin-top: 20px;}
+          13%  { margin-top: 40px;}
+          17%  {margin-top: 30px;}
+          21%  { margin-top: 20px;}
+          25% { margin-left: 120vw; margin-top: 0px;}
+          100% { margin-left: 120vw; }
+        }
+
+    </style>
+</head>
+<body>
+
+
+<!--    ////////////////////////CONSTANT////////////////////   -->
+  
+          <a href="../SCENE_CASCADE/cascade.html" id="bigcarto" style="font-size: 13px;">
+retour à la cascade -->
+  </a>
+
+          <a href="../INVENTAIRE/inventaire.html" id="inventaire" style="font-size: 13px;">
+inventaire
+  </a>
+
+
+  <div id="letout">
+
+    <div id="paysage">
+        <pre style="      font-size: 9px !important;
+     line-height: 11px !important; top: 60px;"><script>document.include('txt/fond_salle_ordis.txt');</script>
+        </pre>
+    </div>
+
+                <!-- pancarte -->
+
+
+    <div id="pancarte_steeve"style="      font-size: 9px !important;
+     line-height: 11px !important; left:-320px; top: -305px; animation: text_pancarte 30s steps(1) infinite;">
+        <pre style="     font-size: 9px !important;
+     line-height: 11px !important;"><script>document.include('txt/pancarte_steeve.txt');</script></pre>
+    </div>
+
+    <div id="pancarte_free"style="     font-size: 9px !important;
+     line-height: 11px !important; left:220px; top: -305px; animation: text_pancarte 30s steps(1) infinite; ">
+        <pre style="     font-size: 9px !important;
+     line-height: 11px !important;"><script>document.include('txt/pancarte_free.txt');</script></pre>
+    </div>
+
+
+                <!-- ordi -->
+
+    <div id="ordi_a_cliquer" style="  font-size: 9px !important;
+     line-height: 11px !important; top: 93px; left: -518px; cursor: alias;" onclick=" window.location.href='../SCENE_ORDINATEUR/ordinateur.html'">
+        <pre style="     font-size: 9px !important;
+     line-height: 11px !important;"><script>document.include('txt/ordi_a_cliquer.txt');</script>
+        </pre>
+    </div>
+
+
+                <!-- telephone -->
+
+   <div id="telephone" style="     font-size: 9px !important;
+     line-height: 11px !important; animation-duration: 20s;" onclick="fonctionTelephone()">
+        <pre style="      font-size: 9px !important;
+     line-height: 11px !important; top: 53px; left: -12px; cursor: pointer;"><script>document.include('txt/telephone.txt');</script>
+        </pre>
+    </div>
+
+
+    <div id="bipbip" style="     font-size: 9px !important;
+     line-height: 11px !important;"> bip<br>&nbsp;&nbsp;bip
+    </div>
+
+
+
+
+<div id="intro_1" class="popup" style=" display:none;">
+ <pre class="pre_popup"><script>document.include('txt/intro_1.txt')</script></pre>
+ <button id="bouton_1_a" class="bouton_intro" onclick="intro_1()" style="width: 116px; top:35px; left:-75px;">Heu... allo&nbsp;?</button>
+  <button id="bouton_1_b" class="bouton_intro" onclick="intro_1()" style="width: 130px; top:35px; left:75px;">Qui me parle&nbsp;?!</button>
+</div>
+
+
+<div id="intro_2" class="popup" style=" display:none;">
+ <pre class="pre_popup"><script>document.include('txt/intro_2.txt')</script></pre>
+ <button id="bouton_2_a" class="bouton_intro" onclick="intro_2()" style="width: 146px; top:40px; left:-93px;">C'est toi Steve&nbsp;?</button>
+   <button id="bouton_2_b" class="bouton_intro" onclick="intro_2()" style="width: 173px; top:40px; left:91px;">Mais vos bureaux sont dans une cascade&nbsp;?</button>
+</div>
+
+<div id="intro_3" class="popup" style=" display:none;">
+ <pre class="pre_popup"><script>document.include('txt/intro_3.txt')</script></pre>
+ <button id="bouton_3_a" class="bouton_intro" onclick="intro_3()" style="width:124px; top:50px; left: -107px;">Salut Steve..?</button>
+  <button id="bouton_3_b" class="bouton_intro" onclick="intro_3()" style="width: 154px; top: 50px; left: 112px;">Salut Stephanie..?</button>
+</div>
+
+<div id="intro_4" class="popup" style=" display:none;">
+ <pre class="pre_popup"><script>document.include('txt/intro_4.txt')</script></pre>
+ <button id="bouton_4" class="bouton_intro" onclick="intro_4()" style="width: 250px; top:50px;">Ah oui vener... Mais où sont toustes tes employ·ées&nbsp;?</button>
+
+</div>
+
+<div id="intro_5" class="popup" style=" display:none;">
+ <pre class="pre_popup"><script>document.include('txt/intro_5.txt')</script></pre>
+  <button id="bouton_5" class="bouton_intro" onclick="intro_5()" style="width: 250px; top:70px; ">Whouaa, mais il n'y a que des femmes qui travaillent ici&nbsp;?
+</button>
+</div>
+
+<div id="intro_6" class="popup" style=" display:none;">
+ <pre class="pre_popup"><script>document.include('txt/intro_6.txt')</script></pre>
+   <button id="bouton_6_a" class="bouton_intro" onclick="intro_6()" style="width: 39px; top:64px; left:-170px;">lol
+</button>
+  <button id="bouton_6_b" class="bouton_intro" onclick="intro_6()" style="width: 254px; top:64px; left: 53px;">Et ça marche bien comme boîte&nbsp;?
+</button>
+</div>
+
+<div id="intro_7" class="popup" style=" display:none;">
+ <pre class="pre_popup"><script>document.include('txt/intro_7.txt')</script></pre>
+   <button id="bouton_7" class="bouton_intro" onclick="tout_fermer()" style="width: 241px; top:55px;">Tu me fais peur Stephanie...
+</button>
+</div>
+
+
+
+    <!-- bat -->
+
+    <div style="left:-60vw; top: -244px; animation: envol 40s steps(30) infinite alternate; cursor: pointer; animation-delay: 15s;  " onclick="fonction_bat()">
+        <pre id="bat" style="     font-size: 9px !important;
+     line-height: 11px !important;"></pre>
+        </div>
+
+
+    <!-- étoile laboria -->
+
+    <div id="etoile_laboria" style="font-size: 9px !important;
+     line-height: 11px !important; left:434px; top: -10px; cursor:pointer;" onclick="fonction_citation_laboria()">$
+        </div>
+
+
+
+    <!-- bougie -->
+
+    <div id="bougie" style="left:-373px; top: -151px; background-color: white; cursor:pointer; font-size: 9px !important;
+     line-height: 11px !important;" onclick="fonction_bougie()">()<br> &nbsp;i
+        </div>
+
+
+
+    <!-- lettre -->
+
+    <div id="lettre"  onclick="fonction_lettre()" style="left:540px; top: 301px; cursor:pointer; font-size: 9px !important;
+     line-height: 11px !important;">
+        <pre style="font-size: 9px !important;
+     line-height: 11px !important;"><script>document.include('txt/lettre.txt');</script>
+        </pre>
+        </div>
+
+  <!--    ////////////////////////LES POP PAGES////////////////////   -->
+
+
+      <!-- protocole batman-->
+
+    <div id="txt_batman" class="popup">
+        <pre class="pre_popup"><script>document.include('txt/txt_batman.txt');</script></pre>
+    </div>
+
+                
+
+      <!--  telephone-->
+
+<div id="appel_steph" class="popup">
+ <pre class="pre_popup"><script>document.include('txt/appel_steph.txt')</script></pre>
+
+</div>
+      <!-- laboria cubonix-->
+
+    <div id="txt_laboria" class="popup">
+        <pre class="pre_popup"><script>document.include('txt/citation_laboria_cubonix.txt');</script></pre>
+    </div>
+
+          <!--txt_lettre-->
+
+    <div id="txt_lettre" class="popup">
+        <pre class="pre_popup"><script>document.include('txt/txt_lettre.txt');</script></pre>
+    </div>
+
+          <!--txt_bougie-->
+
+    <div id="txt_bougie" class="popup">
+        <pre class="pre_popup"><script>document.include('txt/txt_bougie.txt');</script></pre>
+    </div>
+
+<!--///////////////////////FERMER PAGE///////////////////////////////////-->
+
+
+  <div id="tout_fermer" onclick="tout_fermer()"></div>
+  <div id="bloqueur"></div>
+    </div>
+
+
+
+    <script type="text/javascript">
+
+     ///////////////////////ONLOAD////////////////////////////
+
+      $( window ).on( "load", function() {
+        if(localStorage.getItem("intro_steve") == "ok"){
+        }else{
+            document.getElementById("telephone").style.animationName = "secousse";
+            document.getElementById("bipbip").style.animationName = "bipbip";}
+        if(localStorage.getItem("batman") == "ok"){
+            $('#bat').css('cursor', 'auto');
+        }else{}
+        if(localStorage.getItem("citation_laboria_cubonix") == "ok"){
+            $('#etoile_laboria').css('cursor', 'auto');
+        }else{}
+        if(localStorage.getItem("bougie") == "ok"){
+            $('#bougie').css('cursor', 'auto');
+        }else{}
+        if(localStorage.getItem("lettre") == "ok"){
+            $('#lettre').css('cursor', 'auto');
+        }else{}
+})
+
+
+
+    ///////////////////////bat///////////////////////////////////
+
+
+    var text_bat = ['txt/bat_1.txt', 'txt/bat_2.txt'];
+    var counter_bat = 0;
+    var preElement_bat = document.getElementById("bat");
+    var textContents_bat = [];
+    var duration_bat = [333, 333]; // Duration for each text content in milliseconds
+
+    for (var i = 0; i < text_bat.length; i++) {
+        preloadText_bat(text_bat[i], i);
+    }
+
+    function preloadText_bat(url, index) {
+        var request_bat = new XMLHttpRequest();
+        request_bat.open('GET', url, true);
+        request_bat.onreadystatechange = function () {
+            if (request_bat.readyState === XMLHttpRequest.DONE && request_bat.status === 200) {
+                textContents_bat[index] = request_bat.responseText;
+
+                if (index === 0) {
+                    // Display the content of the first file on startup
+                    preElement_bat.textContent = textContents_bat[0];
+                    animate_bat();
+                }
+            }
+        };
+        request_bat.send();
+    }
+
+    function animate_bat() {
+        setTimeout(function() {
+            counter_bat = (counter_bat + 1) % textContents_bat.length;
+            preElement_bat.textContent = textContents_bat[counter_bat];
+            animate_bat();
+        }, duration_bat[counter_bat]);
+    }
+
+
+
+
+
+
+    ///////////////////////**********///////////////////////////////////
+    ///////////////////////FONCTION///////////////////////////////////
+        ///////////////////////******///////////////////////////////////
+
+
+        function tout_fermer(){ 
+                $(".popup").css('display', 'none');  
+            $("#tout_fermer").css('display', 'none');
+        $("#bloqueur").css('display','none');
+
+
+        }
+
+///////////////////////////INTRO//////////////////////////////////////
+
+function fonctionTelephone(){
+    if (localStorage.getItem("intro_steve") == "ok") {
+        $("#appel_steph").css('display','block');
+        $("#tout_fermer").css('display','block');
+    }
+    else{
+        $("#intro_1").css('display','block');
+        $("#bloqueur").css('display','block');
+
+}
+}
+
+
+function intro_1(){ 
+    $("#intro_1").css('display', 'none');   
+    $("#intro_2").css('display','block');
+    $("#bloqueur").css('display','block');}
+
+
+function intro_2(){ 
+    $("#intro_2").css('display', 'none');   
+    $("#intro_3").css('display','block');
+    $("#bloqueur").css('display','block');
+}
+
+
+function intro_3(){ 
+    $("#intro_3").css('display', 'none');   
+    $("#intro_4").css('display','block');
+    $("#bloqueur").css('display','block');
+}
+
+
+function intro_4(){ 
+    $("#intro_4").css('display', 'none');   
+    $("#intro_5").css('display','block');
+    $("#bloqueur").css('display','block');
+}
+
+
+function intro_5(){ 
+    $("#intro_5").css('display', 'none');   
+    $("#intro_6").css('display','block');
+    $("#bloqueur").css('display','block');
+}
+
+
+function intro_6(){ 
+    $("#intro_6").css('display', 'none');   
+    $("#intro_7").css('display','block');
+    localStorage.setItem("intro_steve", "ok"); 
+    $("#bloqueur").css('display','block');
+
+  document.getElementById("#telephone").style.animationName = "";
+  document.getElementById("#bipbip").style.animationName = "";
+}
+
+
+
+
+    function fonction_bat(){
+        if (localStorage.getItem("batman") == "ok") {
+       
+        }else{
+            $("#txt_batman").css('display','block');
+            $("#tout_fermer").css('display','block');
+            localStorage.setItem("batman", "ok");
+            $("#bat").css('cursor','auto');
+        }
+    }
+
+
+    function fonction_citation_laboria(){
+        if (localStorage.getItem("citation_laboria_cubonix") == "ok") {
+            $("#etoile_laboria").css('cursor','auto');
+       
+        }else{
+            $("#txt_laboria").css('display','block');
+            $("#tout_fermer").css('display','block');
+            localStorage.setItem("citation_laboria_cubonix", "ok");
+        }
+    }
+
+    function fonction_bougie(){
+        if (localStorage.getItem("bougie") == "ok") {
+            $("#bougie").css('cursor','auto');
+       
+        }else{
+            $("#txt_bougie").css('display','block');
+            $("#tout_fermer").css('display','block');
+            localStorage.setItem("bougie", "ok");
+        }
+    }
+
+    function fonction_lettre(){
+        if (localStorage.getItem("lettre") == "ok") {
+            $("#lettre").css('cursor','auto');
+       
+        }else{
+            $("#txt_lettre").css('display','block');
+            $("#tout_fermer").css('display','block');
+            localStorage.setItem("lettre", "ok");
+        }
+    }
+
+</script>
+
+</body>
+</html>

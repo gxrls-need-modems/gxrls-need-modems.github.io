@@ -1,0 +1,9 @@
++--------------------------------------------------+
+|                                                  |
+|                                                  |
+|              Tu peux passer l'ami·e.             | 
+|     Fais attention à toi, la créature que tu     |
+|      risques de rencontrer a du caractère...     |
+|                                                  |
+|                                                  |
++--------------------------------------------------+

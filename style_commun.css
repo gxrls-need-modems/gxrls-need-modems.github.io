@@ -1,0 +1,151 @@
+
+@font-face {
+    font-family: 'Consolas-Local';
+    src: url('fonts/Consolas.woff2') format('woff2'),
+         url('fonts/Consolas.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block; /* Important : bloque le rendu jusqu'au chargement */
+    /* Force les métriques */
+    ascent-override: normal;
+    descent-override: normal;
+    line-gap-override: normal;
+}
+
+body {
+    font-family: 'Consolas-Local', 'Consolas', monospace; /* Fallback sur Consolas système */
+    margin: 0; 
+    font-size: 13px !important;
+    line-height: 15px !important; /* La valeur exacte de ton PC */
+    letter-spacing: 0px !important;
+    word-spacing: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+        /* Force le rendu pixel-perfect */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+    
+    /* Empêche les ajustements automatiques */
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+pre {
+    position: absolute;
+        font-family: 'Consolas-Local', 'Consolas', monospace;
+    font-size: 13px !important;
+    line-height: 15px !important; /* La valeur exacte de ton PC */
+    letter-spacing: 0px !important;
+    word-spacing: 0px !important;
+    top: 50%;
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    white-space: pre;
+    /* Force le rendu pixel-perfect */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+    
+    /* Empêche les ajustements automatiques */
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+    
+div{
+    position: absolute;
+    }
+
+
+#bigcarto{
+    font-family: 'Consolas-Local', 'Consolas', monospace;
+        line-height: 15px;
+ font-size: 13px;
+     -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+ cursor:pointer; 
+ text-decoration: none; 
+ color: black; 
+ z-index:40; 
+ margin-top: 30px; 
+ position: absolute; 
+ right: 0%;
+ top: 0% ; 
+ margin-right: 30px; 
+ transform: translate(0%, 0%);   
+}
+
+
+#inventaire{
+ font-family: 'Consolas-Local', 'Consolas', monospace;
+ font-size: 13px;
+    cursor:pointer; 
+    text-decoration: none; 
+    color: black; 
+    z-index:40; 
+    margin-top: 30px; 
+    position: absolute; 
+    left: 0%;
+    top: 0% ; 
+    margin-left: 30px; 
+    transform: translate(0%, 0%);
+}
+
+
+.popup{
+    font-size: 13px;
+    display: none;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 8;
+}
+
+
+ .pre_popup{
+ z-index: 9; 
+ background-color: white; 
+ margin: 7px;
+}
+
+#tout_fermer{
+    height:100vh; 
+    width: 100vw; 
+    z-index: 20; 
+    cursor: pointer; 
+    transform: 
+    translate(-50%, -50%); 
+    top: 50%; 
+    left: 50%; 
+    display: none;
+}
+
+
+.bouton_intro{
+    z-index: 25;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    cursor: pointer;
+}
+
+
+#bloqueur{
+    height:100vh; 
+    width: 100vw; 
+    z-index: 7; 
+    transform: translate(-50%, -50%); 
+    top: 50%; 
+    left: 50%; 
+    display: none;}
+
+
+.actionneur{
+
+}
+

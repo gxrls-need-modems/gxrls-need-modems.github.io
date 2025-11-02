@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<!---
+              _ ____________________
+_|_________\\\\\\                  (_
+ |                                   |
+ |         eat_code_and_die          |
+ |_                        __________|_
+   )_______________________\         |
+
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+          <title>↯–↯–GXRLS NEED MODEMS-↯–↯</title>
+    <link rel="stylesheet" href="../style_commun.css">
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../script_commun.js"></script>
+
+
+
+    <style>
+
+        @keyframes vagues{
+          0%   { margin-left: 0px; }
+          50% { margin-left: 20px; }
+          100% { margin-left: 0px; }
+        }
+
+        @keyframes bateau {
+          0%   { margin-left: 920px; }
+          100% { margin-left: 100px; }
+        }
+
+
+        @keyframes nuages {
+          0%   { left: 0px; }
+          50% { left: 100px; }
+          100% { left: 0px; }
+        }
+
+        @keyframes envol {
+          0%   { margin-left: 0px; }
+          20%  { margin-left: 200px; margin-top: -30px;}
+          35%  { margin-left: 350px; margin-top: 20px;}
+          50%  { margin-left: 500px; margin-top: 40px;}
+          65%  { margin-left: 600px; margin-top: -40px;}
+          100% { margin-left: 920px; margin-top: 30px;}
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+<!--    ////////////////////////CONSTANT////////////////////   -->
+  
+<a href="../CARTO/bigcarto.html" id="bigcarto" >retour à la carto --></a>
+
+<a href="../INVENTAIRE/inventaire.html" id="inventaire" >inventaire</a>
+
+
+<div id="letout">
+
+    <div id="paysage" style="top: 40px;">
+        <pre ><script>document.include('txt/montagne.txt');</script>
+        </pre>
+    </div>
+
+    <!-- traces yeti -->
+
+    <div id="trace" style="left:-200px; cursor: pointer;" onclick="fonction_trace_yeti()">
+        <pre><script>document.include('txt/trace.txt');</script>
+        </pre>
+    </div>
+
+
+    <!-- vagues -->
+
+    <div id="vague" style="animation: vagues 2s steps(2) infinite; top: 210px;">
+
+        <pre ><script>document.include('txt/vague.txt');</script></pre>
+
+        <!-- bouteille à la mer -->
+
+        <div id="etoile" style="left:300px; cursor: pointer;" onclick="fonction_bouteille()">
+            <pre><script>document.include('txt/etoile.txt');</script>
+            </pre>
+        </div>
+
+
+
+        <!-- baleine -->
+
+        <div style="left: -207px; top: 15px; cursor: pointer;" onclick="fonction_bulle()"><pre id="bulle" style="display:block;">V</pre>
+        </div>
+
+
+        <div id="baleine" style="display: none; cursor: pointer;">
+            <pre  style=" background-color:white; z-index: 5; position:absolute; left: -207px; top: 15px;" onclick="fonction_baleine()" ><script>document.include('txt/baleine.txt')</script>
+            
+            </pre>
+        </div>
+
+    </div>
+   <!-- nuages -->
+
+    <div style="animation: nuages 15s steps(10) infinite; top: -210px;">
+        <pre id="nuage"><script>document.include('txt/nuage.txt');</script>
+        </pre>
+    </div>
+
+
+    <!-- bateau -->
+
+    <div style="left: -550px; top: 170px; cursor: pointer; animation: bateau 30s steps(75) infinite; z-index: 2;" onclick="fonction_bateau()">
+        <pre id="bateau" style="background-color: white;"><script>document.include('txt/navire.txt');</script>
+        </pre>
+    </div>
+
+
+    <!-- rideau d'eau -->
+
+    <div style="cursor: alias; top: 75px;" onclick="window.location.href='../SCENE_SALLE_DES_ORDIS/salle_des_ordis.html';">
+        <pre id="rideau_eau"></pre>
+    </div>
+
+
+    <!-- oiseau -->
+
+    <div style="left:-450px; top: -175px; animation:envol 20s steps(40) infinite; cursor: pointer;" onclick="fonction_oiseau()">
+        <pre id="oiseau" style="background-color: white; ">
+        </pre>
+    
+        <pre id="parachute" style="display:none; background-color: white;"><script>document.include('txt/parachute.txt');</script>
+        </pre>  
+    </div>
+
+    <!-- cross -->
+
+    <div id="croix" style="left: 426px; top: 13px; cursor: pointer;  z-index: 2;" onclick="fonction_croix()">
+        <pre>x</pre>
+    </div>
+
+
+    <!-- antenne -->
+
+    <div id="antenne" style="left: 251px; top: -17px; cursor: pointer;  z-index: 2;" onclick="fonction_antenne()">
+        <pre><script>document.include('txt/antenne.txt');</script></pre>
+    </div>
+
+
+</div>
+<!--    ////////////////////////LES POP PAGES////////////////////   -->
+                
+    <!-- modem-->
+
+    <div id="modem" class="popup">
+        <pre class="pre_popup"><script>document.include('txt/modem.txt');</script>
+        </pre>
+    </div>
+
+    <!-- bouteille -->
+
+    <div id="bouteille" class="popup">
+        <pre class="pre_popup"><script>document.include('txt/bouteille.txt');</script>
+        </pre>
+    </div>
+
+
+    <!-- yeti -->
+
+    <div id="yeti" class="popup">
+        <pre class="pre_popup"><script>document.include('txt/yeti.txt');</script>
+        </pre>
+    </div>
+
+
+    <!-- rosi braidotti -->
+
+    <div id="rosi_braidotti" class="popup">
+        <pre class="pre_popup"><script>document.include('txt/rosi_braidotti.txt');</script>
+        </pre>
+    </div>
+
+    <!-- sinatou_saka -->
+
+    <div id="sinatou_saka" class="popup">
+        <pre class="pre_popup"><script>document.include('txt/sinatou_saka.txt');</script>
+        </pre>
+    </div>
+
+
+
+<!--///////////////////////FERMER PAGE///////////////////////////////////-->
+
+
+    <div id="tout_fermer" onclick="tout_fermer()"></div>
+
+</div>
+
+<script type="text/javascript">
+
+    ///////////////////////ONLOAD////////////////////////////
+
+
+
+      $( window ).on( "load", function() {
+ if(localStorage.getItem("modem") == "ok"){
+$('#bateau').css('cursor', 'auto');
+}else if(localStorage.getItem("modem") == "donne"){
+$('#bateau').css('cursor', 'auto');
+}else{}
+if(localStorage.getItem("trace_yeti") == "ok"){
+$('#trace').css('cursor', 'auto');
+}else{}
+if(localStorage.getItem("bouteille_a_la_mer") == "ok"){
+$('#etoile').css('cursor', 'auto');
+}else{}
+if(localStorage.getItem("rosi_braidotti") == "ok"){
+$('#croix').css('cursor', 'auto');
+}else{}
+if(localStorage.getItem("sinatou_saka") == "ok"){
+$('#antenne').css('cursor', 'auto');
+}else{}
+
+
+      })
+
+
+
+
+  ///////////////////////**********///////////////////////////////////
+    ///////////////////////ANIMATION///////////////////////////////////
+        ///////////////////////******///////////////////////////////////
+
+    ///////////////////////RIDEAU D'EAU///////////////////////////////////
+    var text_rideau_eau = ['txt/rideau_eau1.txt', 'txt/rideau_eau2.txt'];
+    var counter_rideau_eau = 0;
+    var preElement_rideau_eau = document.getElementById("rideau_eau");
+    var textContents_rideau_eau = [];
+    var duration_rideau_eau = [250, 250]; // Duration for each text content in milliseconds
+
+    for (var i = 0; i < text_rideau_eau.length; i++) {
+        preloadText_rideau_eau(text_rideau_eau[i], i);
+    }
+
+    function preloadText_rideau_eau(url, index) {
+        var request_rideau_eau = new XMLHttpRequest();
+        request_rideau_eau.open('GET', url, true);
+        request_rideau_eau.onreadystatechange = function () {
+            if (request_rideau_eau.readyState === XMLHttpRequest.DONE && request_rideau_eau.status === 200) {
+                textContents_rideau_eau[index] = request_rideau_eau.responseText;
+
+                if (index === 0) {
+                    // Display the content of the first file on startup
+                    preElement_rideau_eau.textContent = textContents_rideau_eau[0];
+                    animate_rideau_eau();
+                }
+            }
+        };
+        request_rideau_eau.send();
+    }
+
+    function animate_rideau_eau() {
+        setTimeout(function() {
+            counter_rideau_eau = (counter_rideau_eau + 1) % textContents_rideau_eau.length;
+            preElement_rideau_eau.textContent = textContents_rideau_eau[counter_rideau_eau];
+            animate_rideau_eau();
+        }, duration_rideau_eau[counter_rideau_eau]);
+    }
+
+
+    ///////////////////////oiseau///////////////////////////////////
+    var text_oiseau = ['txt/oiseau_1.txt', 'txt/oiseau_2.txt'];
+    var counter_oiseau = 0;
+    var preElement_oiseau = document.getElementById("oiseau");
+    var textContents_oiseau = [];
+    var duration_oiseau = [250, 250]; // Duration for each text content in milliseconds
+
+    for (var i = 0; i < text_oiseau.length; i++) {
+        preloadText_oiseau(text_oiseau[i], i);
+    }
+
+    function preloadText_oiseau(url, index) {
+        var request_oiseau = new XMLHttpRequest();
+        request_oiseau.open('GET', url, true);
+        request_oiseau.onreadystatechange = function () {
+            if (request_oiseau.readyState === XMLHttpRequest.DONE && request_oiseau.status === 200) {
+                textContents_oiseau[index] = request_oiseau.responseText;
+
+                if (index === 0) {
+                    // Display the content of the first file on startup
+                    preElement_oiseau.textContent = textContents_oiseau[0];
+                    animate_oiseau();
+                }
+            }
+        };
+        request_oiseau.send();
+    }
+
+    function animate_oiseau() {
+        setTimeout(function() {
+            counter_oiseau = (counter_oiseau + 1) % textContents_oiseau.length;
+            preElement_oiseau.textContent = textContents_oiseau[counter_oiseau];
+            animate_oiseau();
+        }, duration_oiseau[counter_oiseau]);
+    }
+
+
+
+
+
+
+
+    ///////////////////////**********///////////////////////////////////
+    ///////////////////////FONCTION///////////////////////////////////
+        ///////////////////////******///////////////////////////////////
+
+
+
+
+
+    ///////////////////////MODEM///////////////////////////////////
+
+
+
+    function fonction_bateau(){
+        if(localStorage.getItem("modem") == "ok"){
+        }else if(localStorage.getItem("modem") == "donne"){
+        }else{
+            $("#modem").css('display', 'block');
+            $("#tout_fermer").css('display', 'block');
+            localStorage.setItem("modem", "ok");
+            $("#bateau").css('cursor', 'auto');
+        }
+
+    }
+
+
+
+///////////////////////////oiseau//////////////////////////////////////
+
+    function fonction_oiseau(){
+            $("#parachute").css('display', 'block');
+            $("#oiseau").css('display', 'none');
+    }
+
+
+///////////////////////////MANIFESTE_bouteille//////////////////////////////////////
+
+    function fonction_bouteille(){
+        if(localStorage.getItem("bouteille_a_la_mer") == "ok"){
+        }else{
+            $("#bouteille").css('display', 'block');
+            $("#tout_fermer").css('display', 'block');
+            localStorage.setItem("bouteille_a_la_mer", "ok");
+            $("#etoile").css('cursor', 'auto');
+        }
+    }
+
+
+///////////////////////////CROIX_ROSIE//////////////////////////////////////
+
+    function fonction_croix(){
+        if(localStorage.getItem("rosi_braidotti") == "ok"){
+        }else{
+            $("#rosi_braidotti").css('display', 'block');
+            $("#tout_fermer").css('display', 'block');
+            localStorage.setItem("rosi_braidotti", "ok");
+            $("#croix").css('cursor', 'auto');
+        }
+    }
+
+///////////////////////////traces yeti//////////////////////////////////////
+
+    function fonction_trace_yeti(){
+        if(localStorage.getItem("trace_yeti") == "ok"){
+        }else{
+
+            $("#yeti").css('display', 'block');
+            $("#tout_fermer").css('display', 'block');
+            localStorage.setItem("trace_yeti", "ok");
+            $("#trace").css('cursor', 'auto');
+        }
+    }
+
+
+///////////////////////////traces yeti//////////////////////////////////////
+
+    function fonction_antenne(){
+        if(localStorage.getItem("sinatou_saka") == "ok"){
+        }else{
+
+            $("#sinatou_saka").css('display', 'block');
+            $("#tout_fermer").css('display', 'block');
+            localStorage.setItem("sinatou_saka", "ok");
+            $("#antenne").css('cursor', 'auto');
+        }
+    }
+
+
+
+///////////////////////////BALEINE//////////////////////////////////////
+
+    function fonction_bulle(){
+            $("#baleine").css('display', 'block');
+            $("#bulle").css('display', 'none');
+    }
+
+    function fonction_baleine(){
+            $("#baleine").css('display', 'none');
+            $("#bulle").css('display', 'block');
+    }
+
+
+///////////////////////////FERMER POPUPS//////////////////////////////////////
+    function tout_fermer(){
+            $(".popup").css('display', 'none');   
+            $("#tout_fermer").css('display', 'none');
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
++---------------------------------------------------------------+
+|                                                               |
+|                                                               |
+|      Tu es ici dans les bureaux de Freelance Programmers.     |
+|           Ici on conçoit des logiciels informatiques          |
+|              C'est moi Steve. Enfin Stéphanie...              |
+|                                                               |
+|                                                               |
+|                                                               |
+|                                                               |
+|                                                               |
++---------------------------------------------------------------+

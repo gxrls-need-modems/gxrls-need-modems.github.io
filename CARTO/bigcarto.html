@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!---
+              _ ____________________
+_|_________\\\\\\                  (_
+ |                                   |
+ |         eat_code_and_die          |
+ |_                        __________|_
+   )_______________________\         |
+
+-->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+          <title>↯–↯–GXRLS NEED MODEMS-↯–↯</title>
+    <link rel="stylesheet" href="../style_commun.css">
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../script_commun.js"></script>
+
+    <style>
+
+        body {
+            font-size: 8px !important;
+            line-height: 10px !important;
+
+        }
+
+pre{
+  font-size: 8px  !important;
+  line-height: 10px !important;
+}
+
+       .lien{position: absolute;
+                   top: 50%;
+            left: 50%;  
+            transform: translate(-50%, -50%);}
+    
+
+
+#bouton_redemarrer{
+ font-size: 13px;
+ cursor:pointer; 
+ text-decoration: none; 
+ color: black; 
+ z-index:3; 
+ margin-bottom: 30px; 
+ position: absolute; 
+ right: 0%;
+ bottom: 0% ; 
+ margin-right: 30px; 
+ transform: translate(0%, 0%);
+width: 150px; 
+}
+
+  </style>
+</head>
+
+<html>
+
+<body>
+ 
+          <a href="../INDEX/index.html" id="bigcarto" style="font-size: 13px; ">
+générique
+  </a>
+
+              <button id="bouton_redemarrer"onclick="redemarrer()">redémarrer le jeu</button>
+
+          <a href="../INVENTAIRE/inventaire.html" id="inventaire" style="font-size: 13px;">
+inventaire
+  </a>
+
+  <div id="fond"  style="position:absolute; left: 50%;  top:  50% ;transform: translate(-50%, -50%); height: 750px; width: 1000px;">
+<pre id="bigfond"><script>document.include('big_carto.txt');</script></pre>
+<pre id="bigfond_ile"><script>document.include('big_carto_ile.txt');</script></pre>
+</div>
+
+<a href="../SCENE4_KSJ/ksj.html" id="ksj" class="lien" style="height:95px; width: 115px; margin-top: -275px; margin-left:-380px; "></a>
+
+
+
+<a href="../SCENE_FORET/foret.html" id="foret" class="lien" style="height:60px; width: 100px; margin-top: 40px; margin-left:-85px; position: absolute; "></a>
+
+<a href="../SCENE_CASCADE/cascade.html" id="cascade" class="lien" style="height:75px; width: 67px; margin-top: 30px; margin-left:-215px; position: absolute; "></a>
+
+<a href="../SCENE_ENTREE_TEMPLE/entree_temple.html" id="temple" class="lien" style="height:80px; width: 135px; margin-top: -220px; margin-left:-140px; position: absolute; "></a>
+
+<a href="../SCENE_DAME_DU_CIEL/dame_du_ciel.html" class="lien" id="dame_du_ciel" style="height:105px; width: 85px; margin-top: -190px; margin-left:300px;  "></a>
+
+<a href="../SCENE_ENTREE_ARENE/entree_arene.html" id="arene" class="lien" style="height:80px; width: 84px; margin-top: 245px; margin-left:290px; position: absolute; top: 50%; left: 50%; "></a>
+
+<a href="../SCENE_PHARE/phare.html" id="phare" class="lien" style="height:116px; width: 84px; margin-top: 29px; margin-left:373px; position: absolute; top: 50%; left: 50%;"></a>
+
+
+<a href="../SCENE2_CHAMPS/champs.html" id="ferme" class="lien" style="height:116px; width: 84px; margin-top: -245px; margin-left:130px; position: absolute; top: 50%; left: 50%;"></a>
+
+
+                <!-- boussole -->
+
+    <div id="capteur_boussole" style="position: absolute; top: 50%; left: 50%; margin-top: 210px; margin-left: -160px; cursor: pointer;" onclick="fonctionBoussole()">
+        <pre >>o<</pre>
+    </div>
+
+  <div id="boussole" class="popup">
+    <pre  class="pre_popup"><script>document.include('boussole.txt')</script>
+    </pre>
+</div>
+                <!-- blabla pont -->
+
+    <div id="blabla_pont" class="popup" style="  font-size: 13px; line-height: 15px; z-index:30;" onclick="blablaPont()">
+    <pre  class="pre_popup"><script>document.include('bravo.txt')</script>
+    </div>
+
+
+
+
+
+
+<!--///////////////////////FERMER PAGE///////////////////////////////////-->
+  <div id="tout_fermer"  onclick="tout_fermer()"></div>
+
+
+
+
+
+  <script type="text/javascript">
+         $( window ).on( "load", function() {         
+          if(localStorage.getItem("pont") == "ok"){
+            $('#bigfond').css('display', 'none');
+            $('#bigfond_ile').css('display', 'block');
+            $('#blabla_pont').css('display', 'block');
+            $('#ferme').css('display', 'block');
+            $("#tout_fermer").css('display','block');
+
+          }
+            else if(localStorage.getItem("pont") == "fait"){
+            $('#bigfond_ile').css('display', 'block');
+            $('#bigfond').css('display', 'none');
+            $('#ferme').css('display', 'block');
+          }
+            else if(localStorage.getItem("pont") == "fin_du_jeu"){
+            $('#bigfond_ile').css('display', 'block');
+            $('#bigfond').css('display', 'none');
+            $('#ferme').css('display', 'block');
+            }else{
+            $('#bigfond_ile').css('display', 'none');
+            $('#bigfond').css('display', 'block');    
+            $('#ferme').css('display', 'none');          
+            }
+          if(localStorage.getItem("boussole") == "ok"){
+            $('#capteur_boussole').css('display', 'none');
+          }else{}
+
+      })
+
+
+function fonctionBoussole(){
+    if (localStorage.getItem("boussole") == "ok") {
+    }
+    else{
+        $("#boussole").css('display','block');
+        $("#tout_fermer").css('display','block');
+        localStorage.setItem("boussole", "ok");
+$('#capteur_boussole').css('display', 'none');
+}
+}   
+
+function blablaPont(){
+    localStorage.setItem("pont", "fait");
+    $('#blabla_pont').css('display', 'none');
+    $("#tout_fermer").css('display','none');
+
+}
+
+
+        function tout_fermer(){
+            $(".popup").css('display','none');
+            $("#tout_fermer").css('display','none');
+    }
+
+
+function redemarrer(){
+  window.location.href='../SCENE1_FERME/ferme.html'
+ localStorage.clear();
+ sessionStorage.clear();
+}
+
+  </script>
+
+</body>
+</html> 

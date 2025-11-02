@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positionnement Grille</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../script_commun.js"></script>
+
+    <style>
+    body {
+        font-size: 15px;
+        font-family: Consolas, monospace;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(200, 15px); /* Taille des colonnes en pixels */
+        grid-template-rows: repeat(200, 15px); /* Taille des lignes en pixels */
+        gap: 1px;
+        height: 800px;
+        width: 1100px;
+        position: relative;
+        outline: 1px solid red;
+    }
+
+    .ascii-art {
+        font-family: monospace;
+        font-size: 15px;  /* Taille de la police plus grande */
+        line-height: 1;
+        white-space: pre;
+        outline: 1px dashed blue;
+        overflow: hidden;
+    }
+
+
+    #paysage {
+        grid-column: 1 / span 105; /* L'élément s'étendra sur 5 colonnes */
+        grid-row: 1 / span 37; /* L'élément occupera 3 lignes */
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <pre id="paysage" class="ascii-art"><script>document.include('txt/paysage.txt');</script></pre>
+    </div>
+</body>
+</html>

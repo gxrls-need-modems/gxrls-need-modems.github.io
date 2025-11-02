@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<!---
+              _ ____________________
+_|_________\\\\\\                  (_
+ |                                   |
+ |         eat_code_and_die          |
+ |_                        __________|_
+   )_______________________\         |
+
+-->
+
+
+<!--
+    SEA <- FREE -> RIVER
+-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+          <title>↯–↯–GXRLS NEED MODEMS-↯–↯</title>
+    <link rel="stylesheet" href="../style_commun.css">
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../script_commun.js"></script>
+
+    <style>
+        @keyframes cafe_drop{
+        0% {margin-top:-500px;}
+        2% {margin-top:-500px;}
+        98% {margin-top:-280px;}
+        100% {margin-top:-280px;}
+        }
+
+        .cafe_drop{
+        animation-name: cafe_drop;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        }
+
+        .cafe_lift{
+        margin-top:-500px;
+        }
+
+        .cafe_ok{
+        margin-top:-300px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+    <a href="../CARTO/bigcarto.html" id="bigcarto">retour à la carto -->
+    </a>
+
+    <a href="../INVENTAIRE/inventaire.html" id="inventaire" >inventaire
+    </a>
+
+  
+    <div id="letout">
+
+
+    <div id="paysage" style="right: 0;">
+        <pre ><script>document.include('txt/fond_phare.txt');</script>
+        </pre>
+    </div>
+
+
+
+    <div id="decodeur" style="margin-left: 380px; cursor:pointer;" onclick="fonctionJude1()">
+      <pre id="decodeur_ordi" style="height: 688px;"><script>document.include('txt/decodeur_1.txt') ;</script>
+      </pre>
+    </div>
+
+    <div id="decodeur_ok" style="margin-left: 380px; cursor:pointer; display: none;" onclick="fonctionJude1()">
+      <pre id="decodeur_ordi" style="height: 688px;"><script>document.include('txt/decodeur_5.txt') ;</script>
+      </pre>
+    </div>
+
+
+<!--/////////GOODIES/////////-->
+    <div id="phare" style="top: -184px; margin-left: -443px; cursor:pointer;" onclick="fonctionNews()">
+        <pre><script>document.include('txt/phare.txt') ;</script>
+        </pre>
+    </div>
+    
+    <div style="top: 100px; left: 100px; cursor: pointer;" onclick="fonctionArete()">
+        <pre id="arete"><script>document.include('txt/arete.txt') ;</script>
+        </pre>
+    </div>
+
+    <div style="top: 200px; left: -100px; cursor: pointer;" onclick="fonctionSeu()">
+        <pre id="palmier"><script>document.include('txt/palmier.txt') ;</script>
+        </pre>
+    </div>
+
+
+<!--///////////////////////PAGE POP UP///////////////////////////////////-->
+
+<!--electronic cafe-->
+
+    <div id="cafe" class="cafe_lift">
+        <pre ><script>document.include('txt/cafe.txt') ;</script>
+        </pre>
+    </div>
+
+<!--citation mindy seu-->
+
+    <div id="citation_mindyseu" style="display: none;">
+      <pre style="background-color: white; z-index:6;"><script>document.include('txt/citation_mindyseu.txt');</script>
+      </pre>
+    </div>
+
+<!--anna anthropy-->
+
+    <div id="anthropy" style="display: none;">
+      <pre style="background-color: white; z-index:6;"><script>document.include('txt/anthropy.txt');</script>
+      </pre>
+    </div>
+
+<!--news-->
+
+    <div id="news" class="popup">
+        <pre class="pre_popup" ><script>document.include('txt/news.txt')</script></pre>
+    </div>
+
+
+<!--stjude-->
+
+    <div id="stjude_1" class="popup" style=" display:none;">
+        <pre class="pe_popup" style="z-index: 4; background-color: white; "><script>document.include('txt/stjude_1.txt')</script></pre>
+        <button id="bouton_1" class="bouton_intro" onclick="fonctionJude2()" style="width:364px; top:45px;">Quel est ce visage qui parle dans cette roche&nbsp;?</button>
+    </div>
+
+    <div id="stjude_2" style=" display:none;">
+        <pre style="z-index: 4; background-color: white; "><script>document.include('txt/stjude_2.txt')</script></pre>
+        <button id="bouton_2_a" class="bouton_intro" onclick="fonctionJude3()" style="width: 290px; top:65px; ">Tu as peut être ce que je cherche...</button>
+        <button id="bouton_2_b" class="bouton_intro" onclick="fonctionJude3()" style="width: 350px; top:95px; ">Ton terminal a l'air plus vieux que le temps</button>
+    </div>
+
+    <div id="stjude_3" style=" display:none;">
+        <pre style="z-index: 4; background-color: white; "><script>document.include('txt/stjude_3.txt')</script></pre>
+        <button id="bouton_3" class="bouton_intro" onclick="fonctionJude4()" style="width: 150px; top:100px;">Je peux essayer&nbsp;?</button>
+    </div>
+
+    <div id="stjude_4" style=" display:none;">
+        <pre style="z-index: 4; background-color: white; "><script>document.include('txt/stjude_4.txt')</script></pre>
+        <button id="bouton_4_a" class="bouton_intro" onclick="tout_fermer()" style="width: 215px; top:47px;">C'est quoi encore ça&nbsp;?</button>
+        <button id="bouton_4_b" class="bouton_intro" onclick="fonctionDecodage()" style="width: 290px; top:47px;">Ah, tiens&nbsp;! J'en ai une sous la main</button>
+    </div>
+
+    <div id="stjude_5" style=" display:none;">
+        <pre style="z-index: 4; background-color: white; "><script>document.include('txt/stjude_5.txt')</script></pre>
+    </div>
+
+
+<!--///////////////////////FERMER PAGE///////////////////////////////////-->
+
+
+  		<div id="tout_fermer" style="height:100vh; width: 100vw; z-index: 20; cursor: pointer; transform: translate(-50%, -50%); top: 50%; left: 50%; display: none;" onclick="tout_fermer()"></div>
+
+        <div id="bloqueur"></div>
+
+
+	</div>
+
+	</div>
+
+
+
+
+ 
+    <script type="text/javascript">
+
+
+    ///////////////////////ONLOAD////////////////////////////
+
+    if(localStorage.getItem("news") == "ok"){
+        document.getElementById("phare").style.cursor= "auto";
+    }
+
+    if(localStorage.getItem("anthropy") == "ok"){
+        document.getElementById("arete").style.cursor= "auto";
+    }
+
+    if(localStorage.getItem("citation_seu") == "ok"){
+        document.getElementById("palmier").style.cursor= "auto";
+    }
+
+    if(localStorage.getItem("intro_Jude") == "ok"){
+        document.getElementById("cafe").classList.remove("cafe_lift");
+        document.getElementById("cafe").classList.add("cafe_ok");
+    }
+
+    if(localStorage.getItem("disquette_jaime") == "donne"){
+        document.getElementById("decodeur_ok").style.display= "block";
+        document.getElementById("decodeur").style.display= "none";
+    }
+
+
+    ///////////////////////POP UP///////////////////////////////////
+
+
+    function fonctionNews(){
+        if(localStorage.getItem("news") == "ok"){   
+        }else{
+            $("#news").css('display','block');
+            $("#tout_fermer").css('display','block');
+            $("#phare").css('cursor', 'auto');
+            localStorage.setItem("news", "ok"); 
+        }
+        }
+
+    function fonctionArete(){
+        if(localStorage.getItem("anthropy") == "ok"){   
+        }else{
+            $("#anthropy").css('display','block');
+            $("#tout_fermer").css('display','block');
+            $("#arete").css('cursor', 'auto');
+            localStorage.setItem("anthropy", "ok"); 
+        }
+        }
+
+    function fonctionSeu(){
+        if(localStorage.getItem("citation_seu") == "ok"){   
+        }else{
+            $("#citation_mindyseu").css('display','block');
+            $("#tout_fermer").css('display','block');
+            $("#palmier").css('cursor', 'auto');
+            localStorage.setItem("citation_seu", "ok"); 
+        }
+        }
+
+    function fonctionJude1(){
+        if(localStorage.getItem("intro_Jude") == "ok"){
+            document.getElementById("stjude_4").style.display= "block";
+            document.getElementById("tout_fermer").style.display = "block";
+            if(localStorage.getItem("disquette_jaime") == "ok"){
+                document.getElementById("bouton_4_b").style.display= "block";
+                document.getElementById("bouton_4_a").style.display= "none";
+                $("#bloqueur").css("display","block");
+            }else if(localStorage.getItem("disquette_jaime") == "donne"){
+                document.getElementById("stjude_5").style.display= "block";   
+                document.getElementById("bouton_4_a").style.display= "none";
+                document.getElementById("bouton_4_b").style.display= "none";
+                document.getElementById("stjude_4").style.display= "none";
+                document.getElementById("tout_fermer").style.display= "block";
+                document.getElementById("bloqueur").style.display = "none";
+            }else{
+                document.getElementById("bouton_4_b").style.display= "none";
+                document.getElementById("bouton_4_a").style.display= "block";   
+                $("#bloqueur").css("display","block"); 
+            }
+        }else{
+            document.getElementById("stjude_1").style.display= "block";
+            document.getElementById("bouton_1").style.display= "block";
+                $("#bloqueur").css("display","block");
+        }
+    }
+
+    function fonctionJude2(){
+        document.getElementById("stjude_2").style.display= "block";   
+        document.getElementById("bouton_2_a").style.display= "block";
+        document.getElementById("bouton_2_b").style.display= "block";
+        document.getElementById("bouton_1").style.display= "none";
+        document.getElementById("stjude_1").style.display= "none";
+        document.getElementById("bloqueur").style.display = "block";
+    }
+
+    function fonctionJude3(){
+        document.getElementById("stjude_3").style.display= "block";   
+        document.getElementById("bouton_3").style.display= "block";
+        document.getElementById("bouton_2_a").style.display= "none";
+        document.getElementById("bouton_2_b").style.display= "none";
+        document.getElementById("stjude_2").style.display= "none";
+        document.getElementById("cafe").classList.remove("cafe_lift");
+        document.getElementById("cafe").classList.add("cafe_drop");
+        localStorage.setItem("intro_Jude", "ok");
+                $("#bloqueur").css("display","block");
+    }
+
+    function fonctionJude4(){
+        if(localStorage.getItem("disquette_jaime") == "ok"){
+            document.getElementById("stjude_4").style.display= "block";   
+            document.getElementById("bouton_4_b").style.display= "block";
+            document.getElementById("bouton_4_a").style.display= "none";
+            document.getElementById("bouton_3").style.display= "none";
+            document.getElementById("stjude_3").style.display= "none";
+                $("#bloqueur").css("display","block");
+        }else{
+            document.getElementById("stjude_4").style.display= "block";   
+            document.getElementById("bouton_4_b").style.display= "none";
+            document.getElementById("bouton_4_a").style.display= "block";
+            document.getElementById("bouton_3").style.display= "none";
+            document.getElementById("stjude_3").style.display= "none";
+            document.getElementById("bloqueur").style.display = "block";
+        }
+    }
+
+
+    function fonctionJude5(){
+        document.getElementById("stjude_5").style.display= "block";   
+        document.getElementById("bouton_4").style.display= "none";
+        document.getElementById("stjude_4").style.display= "none";
+        document.getElementById("tout_fermer").style.display= "block";
+        document.getElementById("bloqueur").style.display = "none"; 
+    }
+
+
+    function tout_fermer(){
+        $("#tout_fermer").css('display', 'none');
+        $(".popup").css('display', 'none');
+        $("#stjude_4").css('display', 'none');
+        $("#stjude_5").css('display', 'none');
+        $("#citation_mindyseu").css('display', 'none');
+        $("#anthropy").css('display', 'none');
+        $("#bloqueur").css("display","none");
+    }
+
+
+    ///////////////////////decodeur///////////////////////////////////
+var text_decodeur = [
+    'txt/decodeur_2.txt',
+    'txt/decodeur_3.txt',
+    'txt/decodeur_4.txt',
+    'txt/decodeur_5.txt'
+];
+
+var counter_decodeur = 0;
+var preElement_decodeur = document.getElementById("decodeur_ordi");
+var textContents_decodeur = [];
+var timer_decodeur;
+
+// Preload all the text files using AJAX
+for (var i = 0; i < text_decodeur.length; i++) {
+    preloadText_decodeur(text_decodeur[i], i);
+}
+
+// Function to preload a text file and store its content
+function preloadText_decodeur(url, index) {
+    var request_decodeur = new XMLHttpRequest();
+    request_decodeur.open('GET', url, true);
+    request_decodeur.onreadystatechange = function () {
+        if (request_decodeur.readyState === XMLHttpRequest.DONE && request_decodeur.status === 200) {
+            textContents_decodeur[index] = request_decodeur.responseText;
+        }
+    };
+    request_decodeur.send();
+}
+
+// Play the animation
+function fonctionDecodage() {
+    document.getElementById("stjude_4").style.display= "none";
+    localStorage.setItem("disquette_jaime", "donne");
+    if (timer_decodeur) clearInterval(timer_decodeur); // Clear any previous animation
+    counter_decodeur = 0; // Reset the counter
+
+    timer_decodeur = setInterval(function () {
+        if (counter_decodeur < text_decodeur.length) {
+            preElement_decodeur.textContent = textContents_decodeur[counter_decodeur];
+            counter_decodeur++;
+        } else {
+            clearInterval(timer_decodeur); // Stop the animation when all frames are shown
+        }
+    }, 1000);
+    setTimeout(function() {
+        document.getElementById("stjude_5").style.display= "block";   
+        document.getElementById("tout_fermer").style.display= "block";
+        document.getElementById("bloqueur").style.display = "none";
+    }, 5000);
+}
+
+
+    </script>
+
+
+
+
+</body>
+</html>

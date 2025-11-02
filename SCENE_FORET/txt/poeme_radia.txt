@@ -1,0 +1,27 @@
+   _____________________________________________________________
+ / \                                                            \
+|   |                                                            |
+ \_ |                                                            |
+    |      "Je pense que jamais je ne verrai                     |
+    |       Un graphe aussi beau qu'un arbre parfait.            |
+    |       Un arbre dont la propriété essentielle               |
+    |       Est une connectivité sans boucle, bien réelle.       |
+    |                                                            |
+    |       Un arbre qui doit toujours s’étendre                 |
+    |       Pour que chaque paquet puisse s’y rendre.            |
+    |       D'abord, la racine est désignée,                     |
+    |       Par son ID, elle est bien identifiée.                |
+    |                                                            |
+    |       Les chemins les plus courts sont tracés,             |
+    |       Et dans l’arbre, soigneusement placés.               |
+    |       Un maillage conçu par des gens comme moi,            |
+    |       Puis les ponts forment un arbre qui pousse droit.    |
+    |                                                            |
+    |                                                            |
+    |                            'Algorhyme' - Radia Perlman     |
+    |                                                            |
+    |   _________________________________________________________|___
+    |  /                                                            /
+    \_/____________________________________________________________/
+
+ 

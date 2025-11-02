@@ -1,0 +1,10 @@
++--------------------------------------------------+
+|                                                  |
+|                                                  |
+|      Le chemin est tout tracé, la voie que       |
+|        tu dois suivre te sera donnée près        |
+|        de l'eau. Pour activer la machine,        |
+|        tu auras besoin d'une disquette...        |
+|                                                  |
+|                                                  |
++--------------------------------------------------+
